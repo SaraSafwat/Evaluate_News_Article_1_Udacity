@@ -28,7 +28,7 @@ External API - Meaning Cloud
 - Test functionality of ChechUrl 
 *test Using jest*
 
-#functionality 
+# functionality 
 - User must Enter a valid URL like  ((https://www.google.com/__))
 - The expected resulty presented under the form in the same page 
 
