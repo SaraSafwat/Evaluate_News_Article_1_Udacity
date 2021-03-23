@@ -14,7 +14,8 @@ describe('Test check url functionality', () => {
 
     test('Testing the checkUrl function return false for invalid url', () => {
         var result = Validate_URL(url_notValid);
-        expect(result).toBe(false);
+        expect(Validate_URL(url_notValid)).toBe(false);
+        
     })
 
     test('Testing the checkUrl function return true for valid url', () => {

@@ -1,4 +1,4 @@
-import { Validate_URL } from './Validate_URL'
+import { Validate_URL, protocol, domain_name } from './Validate_URL'
 
 const post = async (url = '', data = {}) => {
     const response = await fetch(url, {
@@ -42,8 +42,24 @@ const handleSubmit = async () => {
 
     }
     else {
+         
 
-        alert('ERROR !! Please Enter a valid URL');
+        if ((!(protocol.test(URL))) && (!(domain_name.test(URL)))) {
+            alert("The URL is entirely wrong! it must look like (https://www.google.com/))");
+
+        }
+        else if (!(protocol.test(URL))) {
+            alert("The URL missing https:// Protocol");
+         
+        }
+        else if (!(domain_name.test(URL))) {
+            alert("The URL missing Domain name");
+         
+        }
+        else if (!(Port_path.test(URL))) {
+            alert("The URL missing port or path");
+         
+        }
     }
 
 }

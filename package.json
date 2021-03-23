@@ -1,12 +1,14 @@
 {
   "name": "evaluate-news-nlp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    
     "start": "nodemon src/server/Server_config.js",
     "build-prod": "webpack --config webpack.prod.js",
-    "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
+    "build-dev": "webpack-dev-server  --config webpack.dev.js --open",
+      "script" : "jest"
+
   },
   "keywords": [],
   "author": "Sara Safwat",
