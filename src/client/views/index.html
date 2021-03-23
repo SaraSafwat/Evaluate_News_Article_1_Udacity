@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+  </head>
+
+  <body>
+      <header>
+          <div id="myname">
+              SARA SAFWAT
+          </div>
+          <div class="">
+              <img src="images\udacity1.jpg" alt="logo"  />
+          </div>
+
+      </header>
+      <main>
+          <div class="container">
+              <p>Enter a URL of an article / a blog to discover its sentiment.</p>
+              <section>
+                  <form id="form">
+                      <label for="article-url">URL</label>
+                      <input id="article-url" type="text" name="input" value="" placeholder="Enter Article URL here" />
+                      <button type="submit"
+                              class="btn-submit">
+                          Submit
+                      </button>
+                  </form>
+              </section>
+
+              <section id="myResult">
+                  <strong><p>Form Results:</p></strong>
+
+                  <table style="width:100%">
+                      <tr>
+                          <td>Text</td>
+                          <td> <div id="text"></div></td>
+                      </tr>
+                      <tr>
+                          <td>Agreement</td>
+                          <td><div id="agreement"></div></td>
+                      </tr>
+                      <tr>
+                          <td>Subjectivity</td>
+                          <td><div id="subjectivity"></div></td>
+                      </tr>
+                      <tr>
+                          <td>Confidence</td>
+                          <td><div id="confidence"></div></td>
+                      </tr>
+                      <tr>
+                          <td>Irony</td>
+                          <td><div id="irony"></div></td>
+                      </tr>
+                      <tr>
+                          <td>score_tag</td>
+                          <td><div id="score_tag"></div></td>
+                      </tr>
+                  </table>
+                  
+              </section>
+          </div>
+      </main>
+      <script>
+          // Check that service workers are supported
+          if ('serviceWorker' in navigator) {
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/service-worker.js')
+              })
+          }
+      </script>
+  </body>
+</html>

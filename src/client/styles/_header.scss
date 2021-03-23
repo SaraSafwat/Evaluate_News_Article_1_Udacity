@@ -1,0 +1,25 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 10px ;
+    max-height:20%;
+    max-width:100%;
+}
+
+#myname {
+    color: deepskyblue;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px 20px;
+
+}
+
+img {
+    float:right;
+    height: 100%;
+    width: 15%;
+    padding: 10px 10px;
+    
+    text-align: right;
+   
+}
