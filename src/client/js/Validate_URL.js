@@ -3,25 +3,33 @@
  *  Helpful alert for the User when wrong URL is entered
  *  
  */
-var protocol;
-var domain_name;
-var Port_path;
+var protocol_check;
+var domain_name_check;
+var Port_path_check;
 
 function Validate_URL(URL) {
 
-    protocol = new RegExp('^(https:\\/\\/?)');
-   
+    
+
+   var protocol = new RegExp('^(https:\\/\\/?)');
+
+    protocol_check = protocol.test(URL);
+
     var domain_name = new RegExp('((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + 
                                             '((\\d{1,3}\\.){3}\\d{1,3}))' );
 
-    var Port_path = new RegExp(
+    domain_name_check = protocol.test(URL);
+
+     var Port_path = new RegExp(
         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + '(\\?[;&a-z\\d%_.~+=-]*)?' +
         '(\\#[-a-z\\d_]*)?$', 'i'); 
 
-    if ((!(protocol.test(URL))) || (!(domain_name.test(URL))) || (!(Port_path.test(URL)) )  )
-    {
-        return false;
+    Port_path_check = protocol.test(URL);
 
+    if ((!protocol_check) || (!domain_name_check) || (!Port_path_check) )  
+    {
+        
+        return false;
     }
     
     return true;
@@ -30,6 +38,7 @@ function Validate_URL(URL) {
 
 
 export { Validate_URL }
-export { protocol }
-export { domain_name }
-export { Port_path }
+export { protocol_check }
+export { domain_name_check }
+export { Port_path_check }
+
